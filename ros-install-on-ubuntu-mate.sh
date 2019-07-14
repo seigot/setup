@@ -1,9 +1,9 @@
 #!/bin/sh 
 
 ## general
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get autoremove
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt-get autoremove -y
 
 ## Step 3: Setup your sources.list
 sudo sh -c ‘echo “deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main” > /etc/apt/sources.list.d/ros-latest.list’
@@ -12,10 +12,10 @@ sudo sh -c ‘echo “deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) 
 wget http://packages.ros.org/ros.key -O – | sudo apt-key add –
 
 ## Step 5: To be sure that your Ubuntu Mate package index is up to date, type the following command
-sudo apt-get update
+sudo apt-get update -y
 
 ## Step 6: Install ros-kinetic-desktop-full
-sudo apt-get install ros-kinetic-desktop-full
+sudo apt-get install ros-kinetic-desktop-full -y
 
 ## Step 7: Initialize rosdep
 sudo rosdep init
